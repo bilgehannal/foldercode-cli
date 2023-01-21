@@ -21,14 +21,14 @@ fcode makes, sending your files anywhere so fast with your command line interfac
 
 ### Installation
 #### MacOS & Linux
-#####  Installing with curl
+**Installing with wget**
 Requirements:
 * wget must be installed.
 Run the command below:
 ```
 wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s --
 ```
-##### Manual Installing
+**Manual Installing**
 * Go to [releases page](https://github.com/bilgehannal/foldercode-cli/releases)
 * Download `fcode` (executable file)
 * Move `fcode` to `/usr/local/bin`
