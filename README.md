@@ -22,6 +22,8 @@ fcode makes, sending your files anywhere so fast with your command line interfac
 ### Installation
 #### MacOS & Linux
 #####  Installing with curl
+Requirements:
+* wget must be installed.
 Run the command below:
 ```
 wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s --
