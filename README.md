@@ -27,11 +27,29 @@ Requirements:
 * wget must be installed.
 Run the command below:
 ```
-wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s --
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s macosx
 ```
 **Manual Installing**
 * Go to [releases page](https://github.com/bilgehannal/foldercode-cli/releases)
-* Download `fcode` (executable file)
+* Download `fcode.macosx` (executable file)
+* Change name to `fcode`
+* Move `fcode` to `/usr/local/bin`
+* Give executable permissions with `chmod +x /usr/local/bin/fcode`
+
+
+#### Linux
+**Installing with wget**
+
+Requirements:
+* wget must be installed.
+  Run the command below:
+```
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s linux
+```
+**Manual Installing**
+* Go to [releases page](https://github.com/bilgehannal/foldercode-cli/releases)
+* Download `fcode.linux` (executable file)
+* Change name to `fcode`
 * Move `fcode` to `/usr/local/bin`
 * Give executable permissions with `chmod +x /usr/local/bin/fcode`
 
