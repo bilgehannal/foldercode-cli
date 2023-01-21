@@ -12,8 +12,9 @@ type Operation interface {
 
 func GetOperationBuilderMap() map[string]OperationBuilder {
 	return map[string]OperationBuilder{
-		"upload": UploadOperationBuilder{},
-		"get":    GettingOperationBuilder{},
+		args.VerbUpload: UploadOperationBuilder{},
+		args.VerbGet:    GettingOperationBuilder{},
+		args.VerbHelp:   HelpOperationBuilder{},
 	}
 }
 

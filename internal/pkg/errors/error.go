@@ -20,6 +20,18 @@ func (e VerbUnsoppertedError) Error() string {
 		$ fc --help`
 }
 
+type CodeMissingError struct{}
+
+func (e CodeMissingError) Error() string {
+	return `Code could not be get, most probably code is missing!`
+}
+
+type FileMissingError struct{}
+
+func (e FileMissingError) Error() string {
+	return `Files could not be get, most probably Files parameters are missing!`
+}
+
 type VerbMissingArgumentsError struct{}
 
 func (e VerbMissingArgumentsError) Error() string {

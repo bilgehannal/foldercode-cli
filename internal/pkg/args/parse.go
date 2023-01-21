@@ -6,12 +6,13 @@ import (
 )
 
 const (
-	orderOfVerbValue   = 0
-	orderOfObjectValue = 1
+	orderOfVerbValue         = 0
+	orderOfObjectValue       = 1
+	numberOfMinimumParameter = 1
 )
 
 func getVerb(args []string) (Verb, error) {
-	if len(args) < 2 {
+	if len(args) < numberOfMinimumParameter {
 		return Verb{}, errors.VerbMissingArgumentsError{}
 	}
 	currentVerb := Verb{Value: args[orderOfVerbValue]}
@@ -29,7 +30,7 @@ func addObjectToList(objects []Object, element string) ([]Object, error) {
 }
 
 func getObjects(args []string) ([]Object, error) {
-	if len(args) < 2 {
+	if len(args) < numberOfMinimumParameter {
 		return []Object{}, errors.VerbMissingArgumentsError{}
 	}
 	var objects []Object

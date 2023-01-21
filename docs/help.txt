@@ -1,0 +1,15 @@
+*** Foldercode CLI ***
+
+* This is cli tool which helps you to using foldercode.com via cli.
+* You can transfer your files easily.
+
+How to use?
+
+** Upload Files **
+$ fc upload x.txt y.txt z.out
+# This command return a code like 'ad47'
+
+** Get Files **
+$ fc get {code}
+$ fc get ad47
+# This command downloads the files uploaded to ad47
