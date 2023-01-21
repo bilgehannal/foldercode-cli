@@ -24,12 +24,13 @@ fcode makes, sending your files anywhere so fast with your command line interfac
 #####  Installing with curl
 Run the command below:
 ```
-$ source <(curl -s https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh)
+curl -s https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s --
 ```
 ##### Manual Installing
 * Go to [releases page](https://github.com/bilgehannal/foldercode-cli/releases)
 * Download `fcode` (executable file)
 * Move `fcode` to `/usr/local/bin`
+* Give executable permissions with `chmod +x /usr/local/bin/fcode`
 
 ---
 [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
