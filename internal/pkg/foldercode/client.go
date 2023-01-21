@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/bilgehannal/foldercode-cli/internal/env"
+	"github.com/bilgehannal/foldercode-cli/internal/pkg/errors"
 	"io"
 	"io/ioutil"
 	"mime/multipart"
@@ -20,9 +21,13 @@ type Session struct {
 	FolderCode string `json:"folderCode"`
 }
 
+type FileResponse struct {
+	Files []File `json:"files"`
+}
+
 type File struct {
-	fileName string
-	fileUrl  string
+	FileName string `json:"filename"`
+	FileUrl  string `json:"file_url"`
 }
 
 func (fc FoldercodeClient) GenerateSession() (Session, error) {
@@ -89,9 +94,55 @@ func (fc FoldercodeClient) UploadFile(s Session, fileName string) error {
 }
 
 func (fc FoldercodeClient) GetFiles(code string) ([]File, error) {
-	return []File{{}}, nil
+	url := fmt.Sprintf("%s/api/v1/folder_files/%s", env.ApiUrlBase, code)
+	method := "GET"
+
+	client := &http.Client{}
+	req, err := http.NewRequest(method, url, nil)
+
+	if err != nil {
+		return []File{{}}, err
+	}
+	res, err := client.Do(req)
+	if err != nil {
+		return []File{{}}, err
+	}
+	defer res.Body.Close()
+
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return []File{{}}, err
+	}
+	var fileResponse FileResponse
+	err = json.Unmarshal(body, &fileResponse)
+	if err != nil {
+		return []File{{}}, err
+	}
+	return fileResponse.Files, nil
 }
 
 func (fc FoldercodeClient) DownloadFile(file File) error {
+	out, err := os.Create(file.FileName)
+	if err != nil {
+		return err
+	}
+	defer out.Close()
+
+	resp, err := http.Get(file.FileUrl)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	// Check server response
+	if resp.StatusCode != http.StatusOK {
+		return errors.DownloadError{}
+	}
+
+	// Writer the body to file
+	_, err = io.Copy(out, resp.Body)
+	if err != nil {
+		return err
+	}
 	return nil
 }

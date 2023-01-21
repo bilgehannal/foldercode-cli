@@ -32,6 +32,12 @@ func (e FileMissingError) Error() string {
 	return `Files could not be get, most probably Files parameters are missing!`
 }
 
+type DownloadError struct{}
+
+func (e DownloadError) Error() string {
+	return `Downloading is not succesfull!`
+}
+
 type VerbMissingArgumentsError struct{}
 
 func (e VerbMissingArgumentsError) Error() string {

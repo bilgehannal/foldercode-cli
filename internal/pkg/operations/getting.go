@@ -1,6 +1,7 @@
 package operations
 
 import (
+	"fmt"
 	"github.com/bilgehannal/foldercode-cli/internal/pkg/args"
 	"github.com/bilgehannal/foldercode-cli/internal/pkg/errors"
 	"github.com/bilgehannal/foldercode-cli/internal/pkg/foldercode"
@@ -28,6 +29,7 @@ func downloadFiles(files []foldercode.File) {
 		if err != nil {
 			errors.FatalPanic("Downloading files error", err)
 		}
+		fmt.Println("Downloaded file: ", file.FileName)
 	}
 }
 
