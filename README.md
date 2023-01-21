@@ -24,7 +24,7 @@ fcode makes, sending your files anywhere so fast with your command line interfac
 #####  Installing with curl
 Run the command below:
 ```
-curl -s https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s --
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s --
 ```
 ##### Manual Installing
 * Go to [releases page](https://github.com/bilgehannal/foldercode-cli/releases)
