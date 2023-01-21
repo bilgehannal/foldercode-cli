@@ -1,5 +1,5 @@
 compile:
-	go build github.com/bilgehannal/foldercode-cli/cmd/fc && echo 'Compiling Succesfull...'
+	go build github.com/bilgehannal/foldercode-cli/cmd/fcode && echo 'Compiling Succesfull...'
 
 unit_test:
 	go test ./... -coverprofile=coverage.out -coverpkg=./...

@@ -15,7 +15,8 @@
 # vendor/
 
 test-files
-fc
+cmd/fcode
 
 .DS_Store
+fcode
 .idea/
