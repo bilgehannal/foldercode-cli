@@ -22,6 +22,7 @@ fcode makes, sending your files anywhere so fast with your command line interfac
 ### Installation
 #### MacOS & Linux
 **Installing with wget**
+
 Requirements:
 * wget must be installed.
 Run the command below:
