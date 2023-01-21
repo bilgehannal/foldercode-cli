@@ -7,6 +7,12 @@ func FatalPanic(errorText string, err error) {
 	panic(err)
 }
 
+type FileNotExistError struct{}
+
+func (e FileNotExistError) Error() string {
+	return `File not exist!`
+}
+
 type VerbUnsoppertedError struct{}
 
 func (e VerbUnsoppertedError) Error() string {

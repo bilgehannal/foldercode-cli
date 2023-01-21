@@ -10,7 +10,9 @@ type EmptyOperationBuilder struct{}
 type EmptyOperation struct{}
 
 func (e EmptyOperation) Run() {
-	fmt.Println("Empty Operation")
+	fmt.Println(`foldercode-cli
+	Test test test
+	`)
 }
 
 func (e EmptyOperationBuilder) CreateOperation(args args.Args) Operation {
