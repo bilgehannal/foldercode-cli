@@ -1,5 +1,6 @@
 builds:
   - binary: fcode
+    id: fcode
     main: ./cmd/fcode/
     goos:
       - darwin
