@@ -1,6 +1,6 @@
 builds:
   - binary: fcode
-    main: ./cmd/fcode
+    main: ./cmd/fcode/
     goos:
       - darwin
       - linux
