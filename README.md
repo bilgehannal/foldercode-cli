@@ -37,22 +37,22 @@ Run the command below:
 
 MacOSX (Intel)
 ```
-wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s 1.0.0 darwin amd64
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s darwin amd64
 ```
 
 MacOSX (Apple Sillicon)
 ```
-wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s 1.0.0 darwin arm64
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s darwin arm64
 ```
 
 Linux (amd64)
 ```
-wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s 1.0.0 linux amd64
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s linux amd64
 ```
 
 Linux (arm64)
 ```
-wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s 1.0.0 linux arm64
+wget -q -O - https://raw.githubusercontent.com/bilgehannal/foldercode-cli/main/install.sh | bash -s linux arm64
 ```
 **Manual Installing**
 * Go to [releases page](https://github.com/bilgehannal/foldercode-cli/releases)
