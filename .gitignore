@@ -19,4 +19,6 @@ cmd/fcode
 
 .DS_Store
 fcode
+fcode.linux
+fcode.macosx
 .idea/
