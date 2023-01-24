@@ -6,10 +6,10 @@
 How to use?
 
 ** Upload Files **
-$ fc upload x.txt y.txt z.out
+$ fcode upload x.txt y.txt z.out
 # This command return a code like 'ad47'
 
 ** Get Files **
-$ fc get {code}
-$ fc get ad47
+$ fcode get {code}
+$ fcode get ad47
 # This command downloads the files uploaded to ad47
